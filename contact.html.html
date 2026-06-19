@@ -33,13 +33,24 @@
             <input type="submit" value="Send Order Enquiry">
         </form>
 
+        <script>
+        document.querySelector('form').addEventListener('submit', (e) => {
+            const email = document.getElementById('email').value;
+  
+             if(!email.includes('@')) {
+                alert('Please enter a valid email with @');
+                e.preventDefault(); // stops form from submitting
+            }
+        });
+        </script>
+        
         <h3>Other Ways to Reach Us</h3>
         <p><strong>WhatsApp:</strong> 060 688 7156</p>
         <p><strong>Email:</strong> order@mitasbakery.co.za</p>
         <p><strong>Area:</strong> Johannesburg, Gauteng</p>
 
-        <h3>FInd Us</h3>
-        <p>We are a home-based bakery serving sll of Johannesburg. Delivery available.</p>
+        <h3>Find Us</h3>
+        <p>We are a home-based bakery serving all of Johannesburg. Delivery available.</p>
     </main>
 
     <footer>
@@ -48,5 +59,7 @@
     
     
     </footer>
+
+<script src="js_assets/script.js"></script>
 </body>
 </html>
