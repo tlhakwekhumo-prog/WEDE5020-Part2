@@ -49,5 +49,23 @@
         <p>&copy; 2026 Mita's Bakery | Johannesburg, Gauteng</p>
         <p>Email: order@mitasbakery.co.za | WhatsApp: 060 688 7156</p>
     </footer>
+    <div class="filter-buttons">
+  <button onclick="FilterCakes('all')">All</button>
+  <button onclick="FilterCakes('cakes')">Cakes</button>
+  <button onclick="FilterCakes('cupcakes')">Cupcakes</button>
+</div>
+
+<script>
+function filterCakes(category) {
+  let items = document.querySelectorAll('.cake-item');
+  items.forEach(item => {
+    if(category === 'all' || item.classList.contains(category)) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+</script>
 </body>
 </html>
