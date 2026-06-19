@@ -20,52 +20,48 @@
         <h2>Our Menu</h2>
         <p>All items baked fresh to order. 48 hours notice requird.</p>
 
-        <section>
-            <h3>Cupcakes</h3>
-            <ul>
-                <li>Vanilla Birthday Cake - R25 each</li>
-                <li>Chocolate Ganache Cupcake - R28 each</li>
-                <li>Red Velvet Cupcake - R28 each</li>
-                <li>Custom Theme Cupcake - From R35 each</li>
-            </ul>
-        </section>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="cupcakes">Cupcakes</button>
+        <button class="filter-btn" data-filter="biscuits">Mini Biscuits</button>
+        <button class="filter-btn" data-filter="mini-cakes">Mini Cakes</button>
+      </div>
 
-        <section>
-            <h3>Mini Cakes & Busicuits</h3>
-            <ul>
-                <li>Baby Shower Mini Cake - R180</li>
-                <li>Custom Sugar Buscuits - R20 each</li>
-                <li>Cake Pops - R22 each</li>
-            </ul>
-        </section>
+      <div class="menu-grid">
+        <div class="menu-card" data-category="cupcakes">
+          <h4>Vanilla Birthday</h4>
+          <p>R25 each</p>
+        </div>
 
-        <section>
-            <h3>Corporate Orders</h3>
-            <p>Branded cupcakes with your logo. Minimum order 24 units. Email us for a quote.</p>
-        </section>
+      
+        <div class="menu-card" data-category="cupcakes">
+          <h4>Chocolate Ganache</h4>
+          <p>R28 each</p>
+        </div>
+
+        <div class="menu-card" data-category="biscuits">
+          <h4>Mini Biscuits</h4>
+          <p>R15 each</p>
+        </div>
+
+        <div class="menu-card" data-category="biscuits">
+          <h4>Shortbread</h4>
+          <p>R18 each</p>
+        </div>
+
+
+        <div class="menu-card" data-category="mini-cakes">
+          <h4>Mini Cake</h4>
+          <p>R35 each</p>
+        </div>
+      </div>
+
     </main>
 
     <footer>
         <p>&copy; 2026 Mita's Bakery | Johannesburg, Gauteng</p>
         <p>Email: order@mitasbakery.co.za | WhatsApp: 060 688 7156</p>
     </footer>
-    <div class="filter-buttons">
-  <button onclick="FilterCakes('all')">All</button>
-  <button onclick="FilterCakes('cakes')">Cakes</button>
-  <button onclick="FilterCakes('cupcakes')">Cupcakes</button>
-</div>
-
-<script>
-function filterCakes(category) {
-  let items = document.querySelectorAll('.cake-item');
-  items.forEach(item => {
-    if(category === 'all' || item.classList.contains(category)) {
-      item.style.display = 'block';
-    } else {
-      item.style.display = 'none';
-    }
-  });
-}
-</script>
+    <script src="js_assets/script.js"></script>
 </body>
 </html>
